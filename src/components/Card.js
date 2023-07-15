@@ -1,10 +1,10 @@
-import { Link, Outlet } from "react-router-dom";
+import { HashRouter, Link, Outlet } from "react-router-dom";
 import CardPage from "./CardPage";
 import RouteSwitch from "./RouteSwitch";
 
 const Card = (props) => {
   return (
-    <div>
+    <div className="card">
       <img className="cardImg" src={props.src} alt={props.src} />
       <h4>
         <Link to={`/shop/${props.title}`}>{props.title}</Link>
