@@ -11,8 +11,9 @@ const RouteSwitch = () => {
     const [itemsInCart, setItemsInCart] = useState(0);
   return (
     <HashRouter>
+        <NavBar itemsInCart={itemsInCart}/>
       <Routes>
-        <Route element={<NavBar itemsInCart={itemsInCart}/>}>
+        
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart itemsInCart={itemsInCart}/>} />
           <Route path="/shop">
@@ -21,11 +22,11 @@ const RouteSwitch = () => {
             {products.map((product) => {
               return <Route
                 path={product.title}
-                element={<CardPage title={product.title} price={product.price} itemsInCart={itemsInCart} setItemsInCart={setItemsInCart}/>}
+                element={<CardPage title={product.title} src={`./Images/${product.title}.png`} price={product.price} itemsInCart={itemsInCart} setItemsInCart={setItemsInCart}/>}
               />;
             })}
           </Route>
-        </Route>
+        
       </Routes>
     </HashRouter>
   );
