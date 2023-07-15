@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 const Filter = (props) =>{
     return(
-        <div>
-        <input type="checkbox" onChange={(e)=>props.setChecked(e.target.checked)}/>
+        <div className="filterText">
+        <input type="checkbox" onChange={(e)=>props.setChecked(e.target.checked)} placeholder={props.label}/>
         <label>{props.label}</label>
         </div>
     )
