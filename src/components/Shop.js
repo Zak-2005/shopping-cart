@@ -1,19 +1,15 @@
-import { Outlet } from "react-router-dom";
 import Card from "./Card";
 import Filter from "./Filter";
 import { products } from "./ProductList";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 const Shop = () => {
   const [utensilFilter, setUtensilFilter] = useState(false);
   const [dishwareFilter, setDishwareFilter] = useState(false);
   const [napkinFilter, setNapkinFilter] = useState(false);
-  useEffect(()=>
-    {
-        console.log(utensilFilter, dishwareFilter, napkinFilter)
-    });
   return (
     <div className="shopContent">
       <div className="filter">
+      <h1 id="shopHeading" test-id="shop">Shop</h1>
       <Filter
           label="Utensils"
           setChecked={setUtensilFilter}
@@ -28,13 +24,14 @@ const Shop = () => {
         />
       </div>
       <div className="products">
-        {products.map((product) => {
+        {products.map((product, index) => {
           if (!utensilFilter && !dishwareFilter && !napkinFilter) {
             return (
               <Card
                 src={`./Images/${product.title}.png`}
                 title={product.title}
                 price={product.price}
+                key={index}
               />
             );
           } else if (utensilFilter && product.type === "Utensil") {
@@ -43,6 +40,7 @@ const Shop = () => {
                 src={`./Images/${product.title}.png`}
                 title={product.title}
                 price={product.price}
+                key={index}
               />
             );
           } else if (dishwareFilter && product.type === "Dishware") {
@@ -51,6 +49,7 @@ const Shop = () => {
                 src={`./Images/${product.title}.png`}
                 title={product.title}
                 price={product.price}
+                key={index}
               />
             );
           } else if (napkinFilter && product.type === "Napkin") {
@@ -59,6 +58,7 @@ const Shop = () => {
                 src={`./Images/${product.title}.png`}
                 title={product.title}
                 price={product.price}
+                key={index}
               />
             );
           }
