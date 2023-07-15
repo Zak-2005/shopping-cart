@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardPage Component Renders CardPage 1`] = `
+<div>
+  <div
+    class="cardPage"
+  >
+    <div
+      class="cardPageInfo"
+    >
+      <h1>
+        Product Title
+      </h1>
+      <img
+        src="product.png"
+      />
+      <h2>
+        9.99
+      </h2>
+      <input
+        min="0"
+        placeholder="Quantity:"
+        type="number"
+      />
+      <button>
+        Add To Cart
+      </button>
+    </div>
+  </div>
+</div>
+`;

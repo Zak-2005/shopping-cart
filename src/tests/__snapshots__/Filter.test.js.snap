@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Filter Component Renders Filter Correctly 1`] = `
+<div>
+  <div
+    class="home"
+  >
+    <h1
+      class="homeText"
+    >
+      Your dining experience is about to change forever
+    </h1>
+    <div>
+      <a
+        href="#/shop/products"
+      >
+        <button
+          id="shopNow"
+          type="button"
+        >
+          Shop Now
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+`;

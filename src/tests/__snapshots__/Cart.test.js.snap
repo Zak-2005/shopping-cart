@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cart Component Renders Cart text and items 1`] = `
+<div>
+  <div
+    class="Cart"
+  >
+    <h1>
+      Cart Quantity: 
+      0
+    </h1>
+  </div>
+</div>
+`;
