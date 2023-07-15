@@ -1,0 +1,103 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+a{
+  all: unset;
+}
+a:hover{
+  cursor: pointer;
+}
+#root{
+  height: 100%;
+}
+body{
+  margin: 0;
+  padding: 0px;
+  height: 100vh;
+}
+.navBar{
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  gap: 15px;
+  font-size: large;
+  color: white;
+  font-weight: bold;
+  line-height: 2;
+  background-color: black;
+}
+
+.home{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(../public/Images/resturant.jpg);
+  background-position-y: -100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.home::before{
+  background-color: rgba(0, 0, 0, 1);
+  z-index: 1;
+}
+.shopContent{
+  display:grid;
+  grid-template-columns: 2fr 7fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.filter{
+  display: flex;
+  flex-direction:column;
+}
+
+.products{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+
+.cardImg{
+  width: auto;
+  height: 150px;
+}
