@@ -1,16 +1,22 @@
-import { Outlet } from "react-router-dom"
+import { Link, Outlet } from "react-router-dom";
 
-const NavBar = () =>{
-    return (
-        <>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>Cart</li>
-            </ul>
-        </nav>
-        <Outlet />
-        </>
-    )
-}
-export default NavBar
+const NavBar = (props) => {
+  return (
+    <>
+      <ul className="navBar">
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/shop/products">Shop</Link>
+        </li>
+        <li>
+          <Link to="/cart">Cart {props.itemsInCart}</Link>
+        </li>
+      </ul>
+
+      <Outlet />
+    </>
+  );
+};
+export default NavBar;
